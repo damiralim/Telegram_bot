@@ -1,7 +1,10 @@
 import requests, telebot, os
+from dotenv import load_dotenv
 
-os.environ['TOKEN'] = '5384137466:AAFWagd9CXO-oX9jyntG898s1Cf4G5yE5UM'
+env_path = os.path.join('template.env')
+load_dotenv(env_path)
 token = os.getenv('TOKEN')
+
 
 shelty_bot = telebot.TeleBot(token)
 
