@@ -1,7 +1,8 @@
-from telebot import TeleBot
+from telebot import TeleBot, StateMemoryStorage
 from config import TOKEN
-from telebot.storage import StateMemoryStorage
 from loguru import logger
+
+''' Запуск логирования и инициализация бота '''
 
 logger.add('debug.log', format='{time} {level} {message}', level='DEBUG')
 storage = StateMemoryStorage()

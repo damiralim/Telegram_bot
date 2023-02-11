@@ -1,1 +1,1 @@
-from . rapid_api import urls, headers, city_request
+from . rapid_api import urls, headers, city_request, hotel_request
