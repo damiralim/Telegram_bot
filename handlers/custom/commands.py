@@ -359,7 +359,7 @@ def output(message: Message) -> Callable:
             if isinstance(hotels_response[id].get('Фото', None), list):
                 medias: List[str] = [InputMediaPhoto(photo) for photo in hotels_response[id]['Фото']]
                 bot.send_media_group(message.from_user.id, medias)
-            if data[id].get('Фото', None) == 0:
+            if hotels_response[id].get('Фото', None) == 0:
                 bot.send_message(message.from_user.id, 'Фото не найдены для данного отеля')
 
         ''' Сохранение полученных данных в БД '''
